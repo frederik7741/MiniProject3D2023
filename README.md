@@ -1,4 +1,5 @@
 # Pi3D Mini-project
+![Visual](Skærmbillede%202023-11-28%20225808.png)
 ## Overview of the Game
 The objective of the project was to create a Half-Life-like game where players explore an area and engage with enemies. In the game, players control a character armed with a shotgun, which has four shots in the magazine. The enemies are represented as small green boxes, and players navigate using "W," "A," "S," and "D" keys, while adjusting their view with the mouse. The left mouse click is used for shooting. The player starts with 100 hit points, and if it reaches 0, the game restarts. Additionally, when the player runs out of ammunition, they can press "R" to reload the weapon.
 
