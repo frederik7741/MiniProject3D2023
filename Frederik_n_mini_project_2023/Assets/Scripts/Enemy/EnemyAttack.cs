@@ -2,30 +2,30 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    // Damage inflicted on the player per second
     public float damagePerSecond = 1f;
 
     private PlayerHealth playerHealth;
 
+    // Initialization
     void Start()
     {
-        // Find the PlayerHealth script on the player GameObject
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
+    // Player collision handling
     void OnTriggerStay(Collider other)
     {
-        // Check if the collider belongs to the player
         if (other.CompareTag("Player"))
         {
-            // Assuming the attack is continuous, you can apply damage each frame the player is in contact with the enemy
             playerHealth.TakeDamage();
         }
     }
 
+    // Enemy death handling
     public void EnemyDie()
     {
-        Debug.Log("enemy died");
-        Destroy(gameObject); // Destroy the enemy GameObject
-
+        Debug.Log("Enemy died");
+        Destroy(gameObject);
     }
 }

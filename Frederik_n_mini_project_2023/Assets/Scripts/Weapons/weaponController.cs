@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//not in use and does not work........
 public class weaponController : MonoBehaviour
 {
     public GameObject Crowbar;

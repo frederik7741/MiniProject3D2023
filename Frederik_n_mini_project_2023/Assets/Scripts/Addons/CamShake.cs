@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CamShake : MonoBehaviour
 {
+    // Coroutine for shaking the camera with specified duration and magnitude
     public IEnumerator Shake(float duration, float magnitude)
     {
         Debug.Log("Shake coroutine started");
@@ -24,6 +25,5 @@ public class CamShake : MonoBehaviour
 
         transform.localPosition = originalPos;
         Debug.Log("Shake coroutine ended");
-
     }
 }

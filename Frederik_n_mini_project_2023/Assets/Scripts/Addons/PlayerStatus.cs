@@ -17,13 +17,11 @@ public class PlayerStatus : MonoBehaviour
     {
         playerRigidbody = GetComponent<Rigidbody>();
         
-        // Assuming PlayerHealth is on the same GameObject as this script
         if (playerHealth == null)
         {
             playerHealth = GetComponent<PlayerHealth>();
         }
 
-        // Make sure speedText and healthText are assigned in the Unity Editor
         if (speedText == null || healthText == null)
         {
             Debug.LogError("SpeedText or HealthText not assigned in the inspector!");
@@ -32,11 +30,12 @@ public class PlayerStatus : MonoBehaviour
 
     void Update()
     {
-        // Display current speed
+        // Calculate and display the player's speed
+
         float speed = playerRigidbody.velocity.magnitude;
         speedText.text = "Speed: " + speed.ToString("F2") + " m/s";
+        // Display current health and ammo
 
-        // Display current health
         healthText.text = "Health: " + playerHealth.currentHealth.ToString();
         ammo.text = "Ammo: " + gunSystem.magazineSize/6 + "/" + gunSystem.bulletsLeft/6;
     }
